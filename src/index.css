@@ -1,0 +1,17 @@
+@import "tailwindcss";
+/* body{
+  overflow: hidden;
+} */
+.grid>div{
+  grid-row:var(--r);
+  grid-column:var(--c);
+}
+
+/* index.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
