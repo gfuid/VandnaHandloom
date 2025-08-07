@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Components
 import Home from "./components/Home";
@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Bathmath from "./Product/Bathmath";
 import Cushion from "./Product/Cushion";
 import Doormate from "./Product/Doormate";
-
 import Rug from "./Product/Rug";
 import Jute from "./Product/Jute";
 import Throw from "./Product/Throw";
@@ -18,13 +17,11 @@ import Dari from "./Product/Dari";
 import Carpet from "./Product/Carpet";
 import Sofa from "./Product/Sofa";
 import AnimatedCursor from "./components/AnimatedCursor";
-import ScrollToTop from './components/ScrollToTop';
-// import Carpet from "./Product/Carpet";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Navbar />
@@ -38,10 +35,8 @@ const App = () => {
           <Route path="/products/jute-specialist" element={<Jute />} />
           <Route path="/products/throw" element={<Throw />} />
           <Route path="/products/hand-crafted-doormat" element={<Doormate />} />
-          <Route path="/products/cushion" element={<Cushion />} />
           <Route path="/products/dari" element={<Dari />} />
           <Route path="/products/sofa" element={<Sofa />} />
-          
           <Route path="/products/carpet" element={<Carpet />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -49,7 +44,7 @@ const App = () => {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </>
   );
 };
 

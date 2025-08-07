@@ -1,4 +1,3 @@
-// Contact.jsx
 import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
@@ -15,15 +14,16 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'your_service_id',     // Replace with your EmailJS service ID
-      'your_template_id',    // Replace with your EmailJS template ID
+      'your_service_id',     // ✅ Replace with your EmailJS service ID
+      'your_template_id',    // ✅ Replace with your EmailJS template ID
       form.current,
-      'your_public_key'      // Replace with your EmailJS public key
+      'your_public_key'      // ✅ Replace with your EmailJS public key
     )
-    .then((result) => {
+    .then(() => {
       alert('Message sent successfully!');
       form.current.reset();
-    }, (error) => {
+    })
+    .catch(() => {
       alert('Failed to send message. Try again later.');
     });
   };
