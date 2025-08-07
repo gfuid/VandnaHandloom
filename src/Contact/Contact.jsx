@@ -94,20 +94,20 @@ const Contact = () => {
 
           <div className="mt-4">
             <h4 className="font-semibold">Email</h4>
-            <p>info@weavetexglobal.com</p>
+            <p>info@vandnahandloom.com</p>
             <p>infoweavetex@gmail.com</p>
-            <p>weavetexglobalinds@gmail.com</p>
+            <p>vandnahandloom@gmail.com</p>
           </div>
 
           <div className="mt-4">
             <h4 className="font-semibold">Website</h4>
             <a
-              href="https://weavetexglobal.com"
+              href="https://vandnahandloom.com"
               className="text-blue-600 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://weavetexglobal.com
+              https://vandnahandloom.com
             </a>
           </div>
         </div>

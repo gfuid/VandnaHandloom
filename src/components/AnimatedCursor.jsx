@@ -1,17 +1,35 @@
-// AnimatedCursor.jsx
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function AnimatedCursor() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect screen size
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust as needed
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     const mouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener("mousemove", mouseMove);
     return () => window.removeEventListener("mousemove", mouseMove);
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null; // ✅ Don't render on mobile
 
   return (
     <>

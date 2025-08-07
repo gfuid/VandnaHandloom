@@ -30,7 +30,7 @@ const Carpet = () => {
   }, []);
 
   return (
-    <section className="bg-[#FDF9F3] px-6 py-20 md:px-20 overflow-hidden">
+    <section className="bg-[#FDF9F3] px-6 py-20 md:px-20 overflow-hidden mt-24">
       {/* Header */}
       <div className="text-center mb-14" data-aos="fade-down">
         <h2 className="text-4xl font-bold text-[#3D2A22]">Our Carpet Collection</h2>

@@ -44,13 +44,7 @@ const slides = [
     image: s5,
     link: "/products/rug",
   },
-  {
-    title: "Designer Floor Mat",
-    description: "Premium textures. Modern design. Timeless quality.",
-    buttonText: "EXPLORE",
-    image: s5,
-    link: "/products/braided", // ✅ Should match actual route
-  },
+  
 ];
 
 export default function HeroSection() {

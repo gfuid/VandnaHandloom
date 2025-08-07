@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import s4 from "../assets/jute.webp";
 import s5 from "../assets/dari.webp";
 import AOS from "aos";
+import {Link } from "react-router-dom"
 import "aos/dist/aos.css";
 
 const Second = () => {
@@ -50,6 +51,7 @@ const Second = () => {
             of home furnishing products, our journey is a testament to unmatched
             quality, artistic finesse, and timeless tradition.
           </p>
+          <Link to="/about">
           <button
             className="mt-4 px-6 py-2 border border-white hover:bg-white hover:text-[#A1410F] transition duration-300 text-sm tracking-wider"
             data-aos="fade-up"
@@ -57,6 +59,7 @@ const Second = () => {
           >
             LEARN MORE
           </button>
+          </Link>
         </div>
       </div>
     </section>

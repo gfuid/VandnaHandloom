@@ -85,7 +85,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="border-t border-[#D8C9B8] pt-4 text-center text-sm text-[#A1410F]">
-        © {year} Weavetex Global. All rights reserved.
+        © {year} VandnaHandloom Global. All rights reserved.
       </div>
     </footer>
   );
