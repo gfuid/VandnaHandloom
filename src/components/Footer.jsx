@@ -87,6 +87,9 @@ export default function Footer() {
       <div className="border-t border-[#D8C9B8] pt-4 text-center text-sm text-[#A1410F]">
         © {year} VandnaHandloom Global. All rights reserved.
       </div>
+      <p>
+        Designed & Developed by <a href="#" className="underline">Sagarpunia</a>
+      </p>
     </footer>
   );
 }
