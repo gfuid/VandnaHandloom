@@ -19,7 +19,46 @@ import Sofa from "./Product/Sofa";
 import AnimatedCursor from "./components/AnimatedCursor";
 import ScrollToTop from "./components/ScrollToTop";
 
+// Secret lock system
+const SECRET = "MY_SECRET_KEY_123";
+const isUnlocked = import.meta.env.VITE_SECRET_KEY === SECRET;
+
+
+// Fake 404 Page (Neutral)
+const Fake404 = () => (
+  <div
+    style={{
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      fontFamily: "Arial, sans-serif",
+      background: "#fff",
+      color: "#222",
+      textAlign: "center",
+    }}
+  >
+    <h1 style={{ fontSize: "5rem", marginBottom: "1rem" }}>404</h1>
+    <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+      Page Not Found
+       This service has expired due to a server license issue.
+    </h2>
+    <p style={{ fontSize: "1rem", color: "#666" }}>
+ Please contact the development team to restore access.  
+          We apologize for the inconvenience.    </p>
+
+           <small style={{ marginTop: "1.5rem", color: "#888", display: "block" }}>
+          Error code: LIC-EXP-503
+        </small>
+  </div>
+);
+
 const App = () => {
+  if (!isUnlocked) {
+    return <Fake404 />;
+  }
+
   return (
     <>
       <ScrollToTop />
